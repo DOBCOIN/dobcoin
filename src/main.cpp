@@ -50,7 +50,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "PuffCoin Signed Message:\n";
+const string strMessageMagic = "DobCoin Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;
@@ -833,8 +833,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 //How *should* blocks be found and how often difficulty retargets
-static const int64 nTargetTimespan = 4 * 60 * 60; // PuffCoin: 4 hour difficulty readjustment
-static const int64 nTargetSpacing = 60; // PuffCoin: 1 minute block targets
+static const int64 nTargetTimespan = 4 * 60 * 60; // DobCoin: 4 hour difficulty readjustment
+static const int64 nTargetSpacing = 60; // DobCoin: 1 minute block targets
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
@@ -1178,7 +1178,7 @@ bool CTransaction::ConnectInputs(MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal puffcoin miner
+    // fMiner is true when called from the internal dobcoin miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -1925,7 +1925,7 @@ bool CheckDiskSpace(uint64 nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "PuffCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "DobCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -2002,7 +2002,7 @@ bool LoadBlockIndex(bool fAllowNew)
     
         
         // Genesis block
-        const char* pszTimestamp = "PuffCoin 2021";
+        const char* pszTimestamp = "DobCoin 2021";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
