@@ -1,9 +1,9 @@
-Building PuffCoin
+Building DobCoin
 
-See doc/readme-qt.rst for instructions on building puffcoin-qt,
+See doc/readme-qt.rst for instructions on building dobcoin-qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of PuffCoin.
+implementation of DobCoin.
 
-See doc/build-*.txt for instructions on building puffcoin,
+See doc/build-*.txt for instructions on building dobcoin,
 the intended-for-services, no-graphical-interface, reference
-implementation of PuffCoin.
+implementation of DobCoin.
