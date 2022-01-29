@@ -34,9 +34,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("PUF");
-    case mBTC: return QString("mPUF");
-    case uBTC: return QString::fromUtf8("μPUF");
+    case BTC: return QString("DOB");
+    case mBTC: return QString("mDOB");
+    case uBTC: return QString::fromUtf8("μDOB");
     default: return QString("???");
     }
 }
@@ -45,13 +45,13 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("PuffCoin");
-    case mBTC: return QString("milliPuffCoin (1 / 1,000)");
-    case uBTC: return QString("microPuffCoin (1 / 1,000,000)");
+    case BTC: return QString("DobCoin");
+    case mBTC: return QString("milliDobCoin (1 / 1,000)");
+    case uBTC: return QString("microDobCoin (1 / 1,000,000)");
     default: return QString("???");
     }
 }
-//a single unit (.00000001) of PuffCoin is called a "wander."
+//a single unit (.00000001) of DobCoin is called a "wander."
 qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
